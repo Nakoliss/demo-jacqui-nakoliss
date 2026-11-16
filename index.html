@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Glow Up Nutritionist — Free Glowup Masterclass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --cream:#FAF7E0; --black:#000; --coral:#FC9170; --blue:#E6EBF6; --pink:#FFF5F2; --gold:#F6C730; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:#111;line-height:1.6}
+  h1,h2,h3,.cond{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+  .topbar{background:#000;color:#fff;text-align:center;padding:10px 16px;font-size:14px;font-weight:600;letter-spacing:.04em}
+  .topbar span{color:var(--gold)}
+  header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  header img{height:54px}
+  .nav-cta{background:#fff;border:2px solid #000;padding:10px 20px;font-family:'Oswald';text-transform:uppercase;font-weight:600;letter-spacing:.05em;text-decoration:none;color:#000;border-radius:999px}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;padding:34px 0 44px}
+  .hero img{width:100%;border-radius:18px;display:block}
+  .eyebrow{display:inline-block;background:var(--gold);padding:5px 12px;font-family:'Oswald';text-transform:uppercase;font-size:13px;letter-spacing:.08em;border-radius:999px;margin-bottom:14px}
+  .hero h1{font-size:52px;margin-bottom:14px}
+  .hero h1 em{font-style:normal;background:#fff;box-shadow:0 0 0 4px #fff;padding:0 6px}
+  .hero p{font-size:18px;margin-bottom:20px}
+  .capture{background:#fff;border:2px solid #000;border-radius:18px;padding:22px;box-shadow:6px 6px 0 #000}
+  .capture h3{font-size:22px;margin-bottom:6px}
+  .capture p{font-size:15px;margin-bottom:14px}
+  .capture form{display:flex;gap:10px;flex-wrap:wrap}
+  .capture input{flex:1;min-width:160px;padding:13px 14px;border:2px solid #000;border-radius:10px;font-size:15px;font-family:inherit}
+  .capture button{background:var(--coral);border:2px solid #000;padding:13px 22px;border-radius:10px;font-family:'Oswald';text-transform:uppercase;font-weight:700;font-size:16px;letter-spacing:.04em;cursor:pointer}
+  .capture small{display:block;margin-top:10px;color:#555;font-size:13px}
+  .strip{background:#000;color:#fff;padding:34px 0}
+  .strip h2{font-size:26px;text-align:center;margin-bottom:22px}
+  .strip h2 span{color:var(--gold)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .step{background:#111;border:1px solid #333;border-radius:14px;padding:20px}
+  .step b{display:block;font-family:'Oswald';text-transform:uppercase;font-size:18px;margin-bottom:6px;color:var(--gold)}
+  .step p{font-size:15px;color:#eee}
+  .proof{padding:44px 0}
+  .proof h2{font-size:32px;text-align:center;margin-bottom:8px}
+  .proof .sub{text-align:center;margin-bottom:26px;color:#444}
+  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .quote{background:var(--blue);border-radius:14px;padding:22px}
+  .quote p{font-size:16px;margin-bottom:10px}
+  .quote b{font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em}
+  .programs{padding:10px 0 44px}
+  .programs h2{font-size:32px;text-align:center;margin-bottom:26px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:#fff;border:2px solid #000;border-radius:16px;padding:22px;box-shadow:5px 5px 0 #000}
+  .card.pink{background:var(--pink)}
+  .card h3{font-size:22px;margin-bottom:6px}
+  .price{font-family:'Oswald';font-size:30px;margin:8px 0}
+  .price small{font-size:15px;font-family:'Inter'}
+  .card p{font-size:15px;margin-bottom:14px}
+  .card a{display:inline-block;background:#fff;border:2px solid #000;padding:10px 18px;border-radius:999px;font-family:'Oswald';text-transform:uppercase;font-weight:600;text-decoration:none;color:#000;font-size:14px}
+  .card a.solid{background:var(--coral)}
+  .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center;padding:20px 0 50px}
+  .about img{width:100%;border-radius:18px;display:block}
+  .about h2{font-size:32px;margin-bottom:12px}
+  .about p{font-size:17px;margin-bottom:12px}
+  .final{background:var(--coral);padding:40px 0;text-align:center}
+  .final h2{font-size:34px;margin-bottom:10px}
+  .final p{font-size:17px;margin-bottom:18px}
+  .final a{display:inline-block;background:#000;color:#fff;padding:14px 28px;border-radius:999px;font-family:'Oswald';text-transform:uppercase;font-weight:700;text-decoration:none;letter-spacing:.04em}
+  footer{background:#000;color:#bbb;text-align:center;padding:22px 16px;font-size:13px;line-height:1.7}
+  footer b{color:#fff}
+  .mock{position:fixed;bottom:14px;right:14px;background:#000;color:#fff;font-size:12px;padding:8px 12px;border-radius:999px;z-index:50}
+  @media(max-width:760px){ .hero,.about{grid-template-columns:1fr} .hero h1{font-size:38px} .steps,.quotes,.cards{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="topbar">FREE GLOWUP MASTERCLASS <span>— watch now, babe</span></div>
+<div class="wrap">
+  <header>
+    <img src="assets/logo.webp" alt="Glowup Nutritionist">
+    <a class="nav-cta" href="#capture">Watch free</a>
+  </header>
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Free masterclass</span>
+      <h1>BUY-BYE to fad diets. <em>Feel your best</em> — for good.</h1>
+      <p>Spilling the tea on why nothing has worked yet — and the smarter, not harder way to lose weight, balance your hormones and keep it off. No restriction. No shame. Just what actually works.</p>
+      <div class="capture" id="capture">
+        <h3>Get instant access</h3>
+        <p>Just your first name and email — that's it.</p>
+        <form onsubmit="return false;">
+          <input type="text" placeholder="First name" aria-label="First name">
+          <input type="email" placeholder="Email address" aria-label="Email address">
+          <button type="submit">Watch free →</button>
+        </form>
+        <small>Maquette conceptuelle — this form collects nothing. No phone number, no application, no call required to watch.</small>
+      </div>
+    </div>
+    <img src="assets/hero.webp" alt="Jacqui Burke, The Glowup Nutritionist">
+  </section>
+</div>
+<section class="strip">
+  <div class="wrap">
+    <h2>How it works <span>— 3 simple steps</span></h2>
+    <div class="steps">
+      <div class="step"><b>1 — Watch free</b><p>Enter your first name and email and watch the free Glowup Masterclass right away. No application, no phone call.</p></div>
+      <div class="step"><b>2 — Get the plan</b><p>A few short emails with the exact first steps — what to eat, how to balance your hormones, and what to stop doing.</p></div>
+      <div class="step"><b>3 — Go deeper, if you want</b><p>When you're ready, join a program or book a call. The choice is yours — nothing is gated behind a form.</p></div>
+    </div>
+  </div>
+</section>
+<section class="proof">
+  <div class="wrap">
+    <h2>Real women. Real wins.</h2>
+    <p class="sub">From Jacqui's clients — in their own words.</p>
+    <div class="quotes">
+      <div class="quote"><p>“I lost 16 lbs in 3 months working with Jacqui… I could never break through 150… I broke through not only this seemingly impossible block but also through all of 140s and into the 130s!”</p><b>— Jane</b></div>
+      <div class="quote"><p>“I felt awful about myself before the program — defeated, depressed, and hopeless. Now I feel amazing!! … I also lost 15 pounds.”</p><b>— Tiffany</b></div>
+      <div class="quote"><p>“Working with Jacqui completely changed my life and relationship with food. Before the program I was confused about what was best for my body, I was binge eating/restricting… I've never loved any photos of myself and I got to take my engagement photos feeling confident!”</p><b>— Nicole</b></div>
+      <div class="quote"><p>“Jacqui's plan allowed me to drink and eat my favorite foods, but I was still able to lose weight. What she does WORKS!”</p><b>— Alycia</b></div>
+    </div>
+  </div>
+</section>
+<section class="programs">
+  <div class="wrap">
+    <h2>Ways to work with Jacqui</h2>
+    <div class="cards">
+      <div class="card pink">
+        <h3>Metabolic Reset</h3>
+        <div class="price">$297 <small>USD · 4 weeks</small></div>
+        <p>Self-paced reset: Prime, Regulate, Detox, Reset — modules, recipes and a habit tracker to reset your metabolism.</p>
+        <a href="#capture">Start the reset</a>
+      </div>
+      <div class="card">
+        <h3>Glowup Collective</h3>
+        <div class="price">$79–$119 <small>USD / month</small></div>
+        <p>The membership: ongoing support, community and coaching. Starter $79/mo, Glow Getter $119/mo.</p>
+        <a href="#capture">Join the collective</a>
+      </div>
+      <div class="card">
+        <h3>The Ultimate Glow Up</h3>
+        <div class="price">13 weeks <small>· max 15 women</small></div>
+        <p>Intimate group coaching with Jacqui. Application only — join the waitlist and we'll reach out when a spot opens.</p>
+        <a class="solid" href="#capture">Join the waitlist</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about">
+  <div class="wrap" style="display:contents">
+    <img src="assets/dreaming.webp" alt="Jacqui Burke">
+    <div>
+      <h2>Meet Jacqui</h2>
+      <p>Registered dietitian, women's metabolism specialist, and your biggest cheerleader. Jacqui helps women 35+ lose weight, balance hormones and feel at home in their bodies again — without dieting, restriction or shame.</p>
+      <p>Work smarter, not harder. You'll NEVER have to diet again.</p>
+      <p><b>xo, Jacqui</b></p>
+    </div>
+  </div>
+</section>
+<section class="final">
+  <div class="wrap">
+    <h2>Ready for your glow up?</h2>
+    <p>Start with the free masterclass. First name and email — that's all it takes.</p>
+    <a href="#capture">Watch the free masterclass →</a>
+  </div>
+</section>
+<footer>
+  <b>© Jacqui Burke Nutrition LLC</b><br>
+  Démo non affiliée — maquette conceptuelle créée à des fins de démonstration.<br>
+  Jacqui Burke Nutrition LLC is not affiliated with this page. Prices shown are the public prices from her site (16 Nov 2026).
+</footer>
+<div class="mock">Maquette conceptuelle</div>
+</body>
+</html>
